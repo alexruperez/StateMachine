@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StateMachine  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="StateMachine  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">StateMachine Docs</a> (0% documented)</p>
+        <p class="header-right"><a href="https://github.com/alexruperez/StateMachine"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Falexruperez%2Egithub%2Eio%2Fdocsets%2FStateMachine%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">StateMachine Reference</a>
+        <img id="carat" src="img/carat.png" />
+        StateMachine  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ActiveApplicationState.html">ActiveApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppearedViewControllerState.html">AppearedViewControllerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppearingViewControllerState.html">AppearingViewControllerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ApplicationState.html">ApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ApplicationStateMachine.html">ApplicationStateMachine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BackgroundApplicationState.html">BackgroundApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DisappearedViewControllerState.html">DisappearedViewControllerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DisappearingViewControllerState.html">DisappearingViewControllerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/InactiveApplicationState.html">InactiveApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NotRunningApplicationState.html">NotRunningApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/StateMachine.html">StateMachine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/StatefulViewController.html">StatefulViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SuspendedApplicationState.html">SuspendedApplicationState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ViewControllerState.html">ViewControllerState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIApplicationDelegate.html">UIApplicationDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/NotificationCenterProtocol.html">NotificationCenterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/State.html">State</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='statemachine' class='heading'>StateMachine</h1>
+
+<p><a href="http://twitter.com/alexruperez"><img src="https://img.shields.io/badge/contact-@alexruperez-0FABFF.svg?style=flat" alt="Twitter"></a>
+<a href="http://cocoapods.org/pods/ArchitStateMachine"><img src="https://img.shields.io/cocoapods/v/ArchitStateMachine.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/ArchitStateMachine"><img src="https://img.shields.io/cocoapods/l/ArchitStateMachine.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/ArchitStateMachine"><img src="https://img.shields.io/cocoapods/p/ArchitStateMachine.svg?style=flat" alt="Platform"></a>
+<a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-4-orange.svg?style=flat" alt="Swift"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat" alt="Swift Package Manager Compatible"></a>
+<a href="https://travis-ci.org/alexruperez/StateMachine"><img src="https://travis-ci.org/alexruperez/StateMachine.svg?branch=master" alt="Build Status"></a>
+<a href="http://cocoapods.org/pods/ArchitStateMachine"><img src="https://img.shields.io/cocoapods/dt/ArchitStateMachine.svg" alt="Downloads"></a>
+<a href="https://www.codetriage.com/alexruperez/statemachine"><img src="https://www.codetriage.com/alexruperez/statemachine/badges/users.svg" alt="Help Contribute to Open Source"></a></p>
+
+<p><strong>StateMachine</strong> is a Swift library to State machine Swift framework inspired by GKStateMachine from Apple GameplayKit framework manage the task execution in different threads. Through the definition a simple but powerful concept, <a href="https://en.wikipedia.org/wiki/State_Machine"><strong>StateMachine</strong></a>.</p>
+<h2 id='features' class='heading'>🌟 Features</h2>
+
+<ul>
+<li>[x] Make kommand or multiple kommands</li>
+</ul>
+<h2 id='installation' class='heading'>📲 Installation</h2>
+
+<p>StateMachine is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'ArchitStateMachine'</span>
+</code></pre>
+<h4 id='or-you-can-install-it-with-a-href-https-github-com-carthage-carthage-carthage-a' class='heading'>Or you can install it with <a href="https://github.com/Carthage/Carthage">Carthage</a>:</h4>
+<pre class="highlight plaintext"><code>github "alexruperez/StateMachine"
+</code></pre>
+<h4 id='or-install-it-with-a-href-https-swift-org-package-manager-swift-package-manager-a' class='heading'>Or install it with <a href="https://swift.org/package-manager/">Swift Package Manager</a>:</h4>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/alexruperez/StateMachine.git"</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre>
+<h2 id='usage' class='heading'>🐒 Usage</h2>
+<h4 id='making-executing-cancelling-and-retrying-kommands' class='heading'>Making, executing, cancelling and retrying Kommands:</h4>
+<pre class="highlight swift"><code><span class="kt">Kommander</span><span class="p">()</span><span class="o">.</span><span class="n">make</span> <span class="p">{</span>
+    <span class="c1">// Your code here</span>
+<span class="p">}</span><span class="o">.</span><span class="nf">execute</span><span class="p">()</span>
+</code></pre>
+<h2 id='etc' class='heading'>❤️ Etc.</h2>
+
+<ul>
+<li>Contributions are very welcome.</li>
+<li>Attribution is appreciated (let&rsquo;s spread the word!), but not mandatory.</li>
+</ul>
+<h2 id='authors' class='heading'>👨‍💻 Authors</h2>
+
+<p><a href="https://github.com/alexruperez">alexruperez</a>, <a href="mailto:contact@alexruperez.com">contact@alexruperez.com</a></p>
+<h2 id='license' class='heading'>👮‍♂️ License</h2>
+
+<p>StateMachine is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://www.alexruperez.com" target="_blank" rel="external">alexruperez</a>. All rights reserved. (Last updated: 2018-01-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

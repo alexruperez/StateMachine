@@ -1,0 +1,16 @@
+module: StateMachine
+module_version: 0.1.0
+github_url: https://github.com/alexruperez/StateMachine
+github_file_prefix: https://github.com/alexruperez/StateMachine/tree/master
+
+author: alexruperez
+author_url: https://www.alexruperez.com
+root_url: https://alexruperez.github.io/StateMachine
+
+clean: true
+readme: README.md
+
+skip_undocumented: false
+hide_documentation_coverage: false
+
+xcodebuild_arguments: [-scheme, iOS]

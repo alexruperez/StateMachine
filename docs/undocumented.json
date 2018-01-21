@@ -1,0 +1,418 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ActiveApplicationState.swift",
+      "line": 11,
+      "symbol": "ActiveApplicationState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ActiveApplicationState.swift",
+      "line": 18,
+      "symbol": "ActiveApplicationState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/AppearedViewControllerState.swift",
+      "line": 11,
+      "symbol": "AppearedViewControllerState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/AppearedViewControllerState.swift",
+      "line": 13,
+      "symbol": "AppearedViewControllerState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/AppearingViewControllerState.swift",
+      "line": 11,
+      "symbol": "AppearingViewControllerState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/AppearingViewControllerState.swift",
+      "line": 13,
+      "symbol": "AppearingViewControllerState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationState.swift",
+      "line": 11,
+      "symbol": "ApplicationState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationState.swift",
+      "line": 12,
+      "symbol": "ApplicationState.applicationState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationState.swift",
+      "line": 14,
+      "symbol": "ApplicationState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 12,
+      "symbol": "UIApplication.stateMachine",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 18,
+      "symbol": "UIApplicationDelegate.stateMachine",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 23,
+      "symbol": "NotificationCenterProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 24,
+      "symbol": "NotificationCenterProtocol.post(name:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 25,
+      "symbol": "NotificationCenterProtocol.addObserver(_:selector:name:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 26,
+      "symbol": "NotificationCenterProtocol.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 31,
+      "symbol": "ApplicationStateMachine",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 33,
+      "symbol": "ApplicationStateMachine.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 36,
+      "symbol": "ApplicationStateMachine.applicationState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ApplicationStateMachine.swift",
+      "line": 40,
+      "symbol": "ApplicationStateMachine.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/BackgroundApplicationState.swift",
+      "line": 11,
+      "symbol": "BackgroundApplicationState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/BackgroundApplicationState.swift",
+      "line": 18,
+      "symbol": "BackgroundApplicationState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/DisappearedViewControllerState.swift",
+      "line": 11,
+      "symbol": "DisappearedViewControllerState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/DisappearedViewControllerState.swift",
+      "line": 13,
+      "symbol": "DisappearedViewControllerState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/DisappearingViewControllerState.swift",
+      "line": 11,
+      "symbol": "DisappearingViewControllerState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/DisappearingViewControllerState.swift",
+      "line": 13,
+      "symbol": "DisappearingViewControllerState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/InactiveApplicationState.swift",
+      "line": 11,
+      "symbol": "InactiveApplicationState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/InactiveApplicationState.swift",
+      "line": 18,
+      "symbol": "InactiveApplicationState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/NotRunningApplicationState.swift",
+      "line": 11,
+      "symbol": "NotRunningApplicationState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/NotRunningApplicationState.swift",
+      "line": 13,
+      "symbol": "NotRunningApplicationState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": null,
+      "symbol": "State",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 11,
+      "symbol": "State",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 12,
+      "symbol": "State.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 14,
+      "symbol": "State.didEnter(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 16,
+      "symbol": "State.update(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 18,
+      "symbol": "State.willExit(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 22,
+      "symbol": "State.didEnter(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 24,
+      "symbol": "State.update(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/State.swift",
+      "line": 26,
+      "symbol": "State.willExit(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 11,
+      "symbol": "StateMachine",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 15,
+      "symbol": "StateMachine.current",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 19,
+      "symbol": "StateMachine.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 23,
+      "symbol": "StateMachine.update(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 27,
+      "symbol": "StateMachine.subscribe(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 32,
+      "symbol": "StateMachine.unsubscribe(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 40,
+      "symbol": "StateMachine.canEnterState(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 44,
+      "symbol": "StateMachine.enter(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StateMachine.swift",
+      "line": 56,
+      "symbol": "StateMachine.state(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 11,
+      "symbol": "StatefulViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 13,
+      "symbol": "StatefulViewController.stateMachine",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 18,
+      "symbol": "StatefulViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 23,
+      "symbol": "StatefulViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 29,
+      "symbol": "StatefulViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 35,
+      "symbol": "StatefulViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/StatefulViewController.swift",
+      "line": 41,
+      "symbol": "StatefulViewController.viewDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/SuspendedApplicationState.swift",
+      "line": 11,
+      "symbol": "SuspendedApplicationState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/SuspendedApplicationState.swift",
+      "line": 13,
+      "symbol": "SuspendedApplicationState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ViewControllerState.swift",
+      "line": 11,
+      "symbol": "ViewControllerState",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ViewControllerState.swift",
+      "line": 13,
+      "symbol": "ViewControllerState.animated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexruperez/Projects/StateMachine/StateMachine/ViewControllerState.swift",
+      "line": 15,
+      "symbol": "ViewControllerState.isValidNext(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/alexruperez/Projects/StateMachine"
+}
