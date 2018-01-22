@@ -10,7 +10,7 @@
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Build Status](https://travis-ci.org/alexruperez/StateMachine.svg?branch=master)](https://travis-ci.org/alexruperez/StateMachine)
 
-Swift library to create [**Finite-state machine**](https://en.wikipedia.org/wiki/Finite-state_machine) inspired by [GKStateMachine](https://developer.apple.com/documentation/gameplaykit/gkstatemachine) from Apple [GameplayKit](https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/StateMachine.html) framework.
+Swift library to create [**Finite-state machines**](https://en.wikipedia.org/wiki/Finite-state_machine) inspired by [GKStateMachine](https://developer.apple.com/documentation/gameplaykit/gkstatemachine) from Apple [GameplayKit](https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/StateMachine.html) framework.
 
 ## 🌟 Features
 

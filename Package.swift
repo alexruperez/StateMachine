@@ -6,7 +6,7 @@ let package = Package(
     .library(name: "StateMachine", targets: ["StateMachine"]),
   ],
   dependencies : [],
-  exclude: ["StateMachineTests", "docs"],
+  exclude: ["UIKit", "Tests", "docs", "Dispenser"],
   targets: [
     .target(name: "StateMachine", dependencies: [])
   ]

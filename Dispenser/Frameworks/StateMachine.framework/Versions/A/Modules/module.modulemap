@@ -1,0 +1,11 @@
+framework module StateMachine {
+  umbrella header "StateMachine.h"
+
+  export *
+  module * { export * }
+}
+
+module StateMachine.Swift {
+    header "StateMachine-Swift.h"
+    requires objc
+}

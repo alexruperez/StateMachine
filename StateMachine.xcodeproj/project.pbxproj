@@ -8,57 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		D53DFB6D201351E000DC7CFE /* StateMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53DFB63201351E000DC7CFE /* StateMachine.framework */; };
-		D53DFB72201351E000DC7CFE /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB71201351E000DC7CFE /* StateMachineTests.swift */; };
-		D53DFB74201351E000DC7CFE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D53DFB66201351E000DC7CFE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D53DFB7E201351FA00DC7CFE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7D201351FA00DC7CFE /* StateMachine.swift */; };
-		D53DFB802013521100DC7CFE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7F2013521100DC7CFE /* State.swift */; };
-		D53DFB9820136ACC00DC7CFE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB9720136ACC00DC7CFE /* ApplicationState.swift */; };
-		D53DFB9A20136AFA00DC7CFE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB9920136AFA00DC7CFE /* ViewControllerState.swift */; };
-		D5D3334F2014844900ACB4AE /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3334E2014844900ACB4AE /* NotRunningApplicationState.swift */; };
-		D5D333512014845F00ACB4AE /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333502014845F00ACB4AE /* InactiveApplicationState.swift */; };
-		D5D333532014847300ACB4AE /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333522014847300ACB4AE /* ActiveApplicationState.swift */; };
-		D5D333552014848100ACB4AE /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333542014848100ACB4AE /* BackgroundApplicationState.swift */; };
-		D5D333572014849300ACB4AE /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333562014849300ACB4AE /* SuspendedApplicationState.swift */; };
-		D5D3335C2014875700ACB4AE /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3335B2014875700ACB4AE /* ApplicationStateMachine.swift */; };
-		D5D3336020149E4D00ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3335F20149E4D00ACB4AE /* DisappearedViewControllerState.swift */; };
-		D5D3336220149E6700ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336120149E6700ACB4AE /* AppearingViewControllerState.swift */; };
-		D5D3336420149E7C00ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336320149E7C00ACB4AE /* AppearedViewControllerState.swift */; };
-		D5D3336620149E9500ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336520149E9500ACB4AE /* DisappearingViewControllerState.swift */; };
-		D5D3336820149F3300ACB4AE /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336720149F3300ACB4AE /* StatefulViewController.swift */; };
-		D5D3336B2014A83A00ACB4AE /* StatefulViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333692014A83A00ACB4AE /* StatefulViewControllerTests.swift */; };
-		D5D3336C2014A83A00ACB4AE /* ApplicationStateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336A2014A83A00ACB4AE /* ApplicationStateMachineTests.swift */; };
-		D5D3338A20150B5600ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D53DFB66201351E000DC7CFE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5D3338B20150B7700ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7D201351FA00DC7CFE /* StateMachine.swift */; };
-		D5D3338C20150B7700ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7F2013521100DC7CFE /* State.swift */; };
-		D5D3339520150B7700ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB9920136AFA00DC7CFE /* ViewControllerState.swift */; };
-		D5D3339620150B7700ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3335F20149E4D00ACB4AE /* DisappearedViewControllerState.swift */; };
-		D5D3339720150B7700ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336120149E6700ACB4AE /* AppearingViewControllerState.swift */; };
-		D5D3339820150B7700ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336320149E7C00ACB4AE /* AppearedViewControllerState.swift */; };
-		D5D3339920150B7700ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336520149E9500ACB4AE /* DisappearingViewControllerState.swift */; };
-		D5D333A720150FF700ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7D201351FA00DC7CFE /* StateMachine.swift */; };
-		D5D333A820150FF700ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7F2013521100DC7CFE /* State.swift */; };
-		D5D333A920150FF700ACB4AE /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3335B2014875700ACB4AE /* ApplicationStateMachine.swift */; };
-		D5D333AA20150FF700ACB4AE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB9720136ACC00DC7CFE /* ApplicationState.swift */; };
-		D5D333AB20150FF700ACB4AE /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3334E2014844900ACB4AE /* NotRunningApplicationState.swift */; };
-		D5D333AC20150FF700ACB4AE /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333502014845F00ACB4AE /* InactiveApplicationState.swift */; };
-		D5D333AD20150FF700ACB4AE /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333522014847300ACB4AE /* ActiveApplicationState.swift */; };
-		D5D333AE20150FF700ACB4AE /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333542014848100ACB4AE /* BackgroundApplicationState.swift */; };
-		D5D333AF20150FF700ACB4AE /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333562014849300ACB4AE /* SuspendedApplicationState.swift */; };
-		D5D333B020150FF700ACB4AE /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336720149F3300ACB4AE /* StatefulViewController.swift */; };
-		D5D333B120150FF700ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB9920136AFA00DC7CFE /* ViewControllerState.swift */; };
-		D5D333B220150FF700ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3335F20149E4D00ACB4AE /* DisappearedViewControllerState.swift */; };
-		D5D333B320150FF700ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336120149E6700ACB4AE /* AppearingViewControllerState.swift */; };
-		D5D333B420150FF700ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336320149E7C00ACB4AE /* AppearedViewControllerState.swift */; };
-		D5D333B520150FF700ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336520149E9500ACB4AE /* DisappearingViewControllerState.swift */; };
-		D5D333B620150FFB00ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D53DFB66201351E000DC7CFE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5D333C42015107400ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7D201351FA00DC7CFE /* StateMachine.swift */; };
-		D5D333C52015107400ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB7F2013521100DC7CFE /* State.swift */; };
-		D5D333CE2015107400ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DFB9920136AFA00DC7CFE /* ViewControllerState.swift */; };
-		D5D333CF2015107400ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3335F20149E4D00ACB4AE /* DisappearedViewControllerState.swift */; };
-		D5D333D02015107400ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336120149E6700ACB4AE /* AppearingViewControllerState.swift */; };
-		D5D333D12015107400ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336320149E7C00ACB4AE /* AppearedViewControllerState.swift */; };
-		D5D333D22015107400ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3336520149E9500ACB4AE /* DisappearingViewControllerState.swift */; };
-		D5D333D32015107800ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D53DFB66201351E000DC7CFE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5D333F92015E2F000ACB4AE /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */; };
+		D5D333FA2015E2F000ACB4AE /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */; };
+		D5D333FB2015E2F000ACB4AE /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */; };
+		D5D333FC2015E2F000ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */; };
+		D5D333FD2015E2F000ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */; };
+		D5D333FE2015E2F000ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */; };
+		D5D333FF2015E2F000ACB4AE /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */; };
+		D5D334002015E2F000ACB4AE /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */; };
+		D5D334012015E2F000ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */; };
+		D5D334022015E2F000ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */; };
+		D5D334032015E2F000ACB4AE /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */; };
+		D5D334042015E2F000ACB4AE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */; };
+		D5D334052015E2F000ACB4AE /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */; };
+		D5D3340A2015E2F000ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F52015E2F000ACB4AE /* StateMachine.swift */; };
+		D5D3340B2015E2F000ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D333F62015E2F000ACB4AE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5D3340C2015E2F000ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F72015E2F000ACB4AE /* State.swift */; };
+		D5D3341A2015E30B00ACB4AE /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */; };
+		D5D3341B2015E30B00ACB4AE /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */; };
+		D5D3341C2015E30B00ACB4AE /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */; };
+		D5D3341D2015E30B00ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */; };
+		D5D3341E2015E30B00ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */; };
+		D5D3341F2015E30B00ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */; };
+		D5D334202015E30B00ACB4AE /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */; };
+		D5D334212015E30B00ACB4AE /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */; };
+		D5D334222015E30B00ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */; };
+		D5D334232015E30B00ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */; };
+		D5D334242015E30B00ACB4AE /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */; };
+		D5D334252015E30B00ACB4AE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */; };
+		D5D334262015E30B00ACB4AE /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */; };
+		D5D334272015E31500ACB4AE /* StatefulViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F02015E2EF00ACB4AE /* StatefulViewControllerTests.swift */; };
+		D5D334282015E31500ACB4AE /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F12015E2EF00ACB4AE /* StateMachineTests.swift */; };
+		D5D334292015E31500ACB4AE /* ApplicationStateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F22015E2EF00ACB4AE /* ApplicationStateMachineTests.swift */; };
+		D5D3342A2015E32400ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F52015E2F000ACB4AE /* StateMachine.swift */; };
+		D5D3342B2015E32400ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F72015E2F000ACB4AE /* State.swift */; };
+		D5D3342C2015E32500ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F52015E2F000ACB4AE /* StateMachine.swift */; };
+		D5D3342D2015E32500ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F72015E2F000ACB4AE /* State.swift */; };
+		D5D3342E2015E32600ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F52015E2F000ACB4AE /* StateMachine.swift */; };
+		D5D3342F2015E32600ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F72015E2F000ACB4AE /* State.swift */; };
+		D5D334302015E32C00ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D333F62015E2F000ACB4AE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5D334312015E32D00ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D333F62015E2F000ACB4AE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5D334322015E32E00ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D333F62015E2F000ACB4AE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,35 +59,57 @@
 			remoteGlobalIDString = D53DFB62201351E000DC7CFE;
 			remoteInfo = StateMachine;
 		};
+		D5D334142015E2F900ACB4AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D3340E2015E2F900ACB4AE /* Dispenser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A4C6BF451B55EAB2004B1CBD;
+			remoteInfo = "Dispenser (OS X)";
+		};
+		D5D334162015E2F900ACB4AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D3340E2015E2F900ACB4AE /* Dispenser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A45C61A41B6ADCDE00F95E41;
+			remoteInfo = "Dispenser (iOS)";
+		};
+		D5D334182015E2F900ACB4AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D3340E2015E2F900ACB4AE /* Dispenser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 114562061BF6A15E008EC371;
+			remoteInfo = "Dispenser (tvOS)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D53DFB63201351E000DC7CFE /* StateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D53DFB66201351E000DC7CFE /* StateMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
-		D53DFB67201351E000DC7CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D53DFB6C201351E000DC7CFE /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D53DFB71201351E000DC7CFE /* StateMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
-		D53DFB73201351E000DC7CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D53DFB7D201351FA00DC7CFE /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
-		D53DFB7F2013521100DC7CFE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		D53DFB9720136ACC00DC7CFE /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
-		D53DFB9920136AFA00DC7CFE /* ViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerState.swift; sourceTree = "<group>"; };
-		D5D3334E2014844900ACB4AE /* NotRunningApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotRunningApplicationState.swift; sourceTree = "<group>"; };
-		D5D333502014845F00ACB4AE /* InactiveApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveApplicationState.swift; sourceTree = "<group>"; };
-		D5D333522014847300ACB4AE /* ActiveApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveApplicationState.swift; sourceTree = "<group>"; };
-		D5D333542014848100ACB4AE /* BackgroundApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundApplicationState.swift; sourceTree = "<group>"; };
-		D5D333562014849300ACB4AE /* SuspendedApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendedApplicationState.swift; sourceTree = "<group>"; };
-		D5D3335B2014875700ACB4AE /* ApplicationStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStateMachine.swift; sourceTree = "<group>"; };
-		D5D3335F20149E4D00ACB4AE /* DisappearedViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisappearedViewControllerState.swift; sourceTree = "<group>"; };
-		D5D3336120149E6700ACB4AE /* AppearingViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearingViewControllerState.swift; sourceTree = "<group>"; };
-		D5D3336320149E7C00ACB4AE /* AppearedViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearedViewControllerState.swift; sourceTree = "<group>"; };
-		D5D3336520149E9500ACB4AE /* DisappearingViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisappearingViewControllerState.swift; sourceTree = "<group>"; };
-		D5D3336720149F3300ACB4AE /* StatefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
-		D5D333692014A83A00ACB4AE /* StatefulViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewControllerTests.swift; sourceTree = "<group>"; };
-		D5D3336A2014A83A00ACB4AE /* ApplicationStateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateMachineTests.swift; sourceTree = "<group>"; };
 		D5D33382201509B100ACB4AE /* StateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D3339F20150FBC00ACB4AE /* StateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D333BC2015101300ACB4AE /* StateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateMachine.swift; sourceTree = "<group>"; };
+		D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveApplicationState.swift; sourceTree = "<group>"; };
+		D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewController.swift; sourceTree = "<group>"; };
+		D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerState.swift; sourceTree = "<group>"; };
+		D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearingViewControllerState.swift; sourceTree = "<group>"; };
+		D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisappearedViewControllerState.swift; sourceTree = "<group>"; };
+		D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuspendedApplicationState.swift; sourceTree = "<group>"; };
+		D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotRunningApplicationState.swift; sourceTree = "<group>"; };
+		D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearedViewControllerState.swift; sourceTree = "<group>"; };
+		D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisappearingViewControllerState.swift; sourceTree = "<group>"; };
+		D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InactiveApplicationState.swift; sourceTree = "<group>"; };
+		D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundApplicationState.swift; sourceTree = "<group>"; };
+		D5D333F02015E2EF00ACB4AE /* StatefulViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatefulViewControllerTests.swift; sourceTree = "<group>"; };
+		D5D333F12015E2EF00ACB4AE /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
+		D5D333F22015E2EF00ACB4AE /* ApplicationStateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStateMachineTests.swift; sourceTree = "<group>"; };
+		D5D333F32015E2EF00ACB4AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D333F52015E2F000ACB4AE /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		D5D333F62015E2F000ACB4AE /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
+		D5D333F72015E2F000ACB4AE /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		D5D333F82015E2F000ACB4AE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D3340E2015E2F900ACB4AE /* Dispenser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dispenser.xcodeproj; path = Dispenser/Dispenser.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +155,10 @@
 		D53DFB59201351E000DC7CFE = {
 			isa = PBXGroup;
 			children = (
-				D53DFB65201351E000DC7CFE /* StateMachine */,
-				D53DFB70201351E000DC7CFE /* StateMachineTests */,
+				D5D3340E2015E2F900ACB4AE /* Dispenser.xcodeproj */,
+				D5D333F42015E2F000ACB4AE /* Core */,
+				D5D333E12015E2EF00ACB4AE /* UIKit */,
+				D5D333EF2015E2EF00ACB4AE /* Tests */,
 				D53DFB64201351E000DC7CFE /* Products */,
 				D53DFB942013682000DC7CFE /* Frameworks */,
 			);
@@ -162,46 +176,63 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D53DFB65201351E000DC7CFE /* StateMachine */ = {
-			isa = PBXGroup;
-			children = (
-				D53DFB66201351E000DC7CFE /* StateMachine.h */,
-				D53DFB7D201351FA00DC7CFE /* StateMachine.swift */,
-				D53DFB7F2013521100DC7CFE /* State.swift */,
-				D5D3335B2014875700ACB4AE /* ApplicationStateMachine.swift */,
-				D53DFB9720136ACC00DC7CFE /* ApplicationState.swift */,
-				D5D3334E2014844900ACB4AE /* NotRunningApplicationState.swift */,
-				D5D333502014845F00ACB4AE /* InactiveApplicationState.swift */,
-				D5D333522014847300ACB4AE /* ActiveApplicationState.swift */,
-				D5D333542014848100ACB4AE /* BackgroundApplicationState.swift */,
-				D5D333562014849300ACB4AE /* SuspendedApplicationState.swift */,
-				D5D3336720149F3300ACB4AE /* StatefulViewController.swift */,
-				D53DFB9920136AFA00DC7CFE /* ViewControllerState.swift */,
-				D5D3335F20149E4D00ACB4AE /* DisappearedViewControllerState.swift */,
-				D5D3336120149E6700ACB4AE /* AppearingViewControllerState.swift */,
-				D5D3336320149E7C00ACB4AE /* AppearedViewControllerState.swift */,
-				D5D3336520149E9500ACB4AE /* DisappearingViewControllerState.swift */,
-				D53DFB67201351E000DC7CFE /* Info.plist */,
-			);
-			path = StateMachine;
-			sourceTree = "<group>";
-		};
-		D53DFB70201351E000DC7CFE /* StateMachineTests */ = {
-			isa = PBXGroup;
-			children = (
-				D53DFB71201351E000DC7CFE /* StateMachineTests.swift */,
-				D5D3336A2014A83A00ACB4AE /* ApplicationStateMachineTests.swift */,
-				D5D333692014A83A00ACB4AE /* StatefulViewControllerTests.swift */,
-				D53DFB73201351E000DC7CFE /* Info.plist */,
-			);
-			path = StateMachineTests;
-			sourceTree = "<group>";
-		};
 		D53DFB942013682000DC7CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5D333E12015E2EF00ACB4AE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */,
+				D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */,
+				D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */,
+				D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */,
+				D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */,
+				D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */,
+				D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */,
+				D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */,
+				D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */,
+				D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */,
+				D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */,
+				D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */,
+				D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D5D333EF2015E2EF00ACB4AE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D5D333F02015E2EF00ACB4AE /* StatefulViewControllerTests.swift */,
+				D5D333F12015E2EF00ACB4AE /* StateMachineTests.swift */,
+				D5D333F22015E2EF00ACB4AE /* ApplicationStateMachineTests.swift */,
+				D5D333F32015E2EF00ACB4AE /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D5D333F42015E2F000ACB4AE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D5D333F52015E2F000ACB4AE /* StateMachine.swift */,
+				D5D333F62015E2F000ACB4AE /* StateMachine.h */,
+				D5D333F72015E2F000ACB4AE /* State.swift */,
+				D5D333F82015E2F000ACB4AE /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D5D3340F2015E2F900ACB4AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5D334152015E2F900ACB4AE /* Dispenser.app */,
+				D5D334172015E2F900ACB4AE /* Dispenser.app */,
+				D5D334192015E2F900ACB4AE /* Dispenser.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +242,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53DFB74201351E000DC7CFE /* StateMachine.h in Headers */,
+				D5D3340B2015E2F000ACB4AE /* StateMachine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +250,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D3338A20150B5600ACB4AE /* StateMachine.h in Headers */,
+				D5D334302015E32C00ACB4AE /* StateMachine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +258,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D333B620150FFB00ACB4AE /* StateMachine.h in Headers */,
+				D5D334312015E32D00ACB4AE /* StateMachine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +266,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D333D32015107800ACB4AE /* StateMachine.h in Headers */,
+				D5D334322015E32E00ACB4AE /* StateMachine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +402,12 @@
 			mainGroup = D53DFB59201351E000DC7CFE;
 			productRefGroup = D53DFB64201351E000DC7CFE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D5D3340F2015E2F900ACB4AE /* Products */;
+					ProjectRef = D5D3340E2015E2F900ACB4AE /* Dispenser.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D53DFB62201351E000DC7CFE /* iOS */,
@@ -381,6 +418,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D5D334152015E2F900ACB4AE /* Dispenser.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Dispenser.app;
+			remoteRef = D5D334142015E2F900ACB4AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5D334172015E2F900ACB4AE /* Dispenser.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Dispenser.app;
+			remoteRef = D5D334162015E2F900ACB4AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5D334192015E2F900ACB4AE /* Dispenser.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Dispenser.app;
+			remoteRef = D5D334182015E2F900ACB4AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D53DFB61201351E000DC7CFE /* Resources */ = {
@@ -425,21 +486,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D3336420149E7C00ACB4AE /* AppearedViewControllerState.swift in Sources */,
-				D5D333552014848100ACB4AE /* BackgroundApplicationState.swift in Sources */,
-				D5D3336020149E4D00ACB4AE /* DisappearedViewControllerState.swift in Sources */,
-				D5D3336220149E6700ACB4AE /* AppearingViewControllerState.swift in Sources */,
-				D5D3336620149E9500ACB4AE /* DisappearingViewControllerState.swift in Sources */,
-				D53DFB9A20136AFA00DC7CFE /* ViewControllerState.swift in Sources */,
-				D5D3335C2014875700ACB4AE /* ApplicationStateMachine.swift in Sources */,
-				D5D333572014849300ACB4AE /* SuspendedApplicationState.swift in Sources */,
-				D5D3334F2014844900ACB4AE /* NotRunningApplicationState.swift in Sources */,
-				D53DFB9820136ACC00DC7CFE /* ApplicationState.swift in Sources */,
-				D53DFB7E201351FA00DC7CFE /* StateMachine.swift in Sources */,
-				D53DFB802013521100DC7CFE /* State.swift in Sources */,
-				D5D333512014845F00ACB4AE /* InactiveApplicationState.swift in Sources */,
-				D5D3336820149F3300ACB4AE /* StatefulViewController.swift in Sources */,
-				D5D333532014847300ACB4AE /* ActiveApplicationState.swift in Sources */,
+				D5D333FA2015E2F000ACB4AE /* ActiveApplicationState.swift in Sources */,
+				D5D333FB2015E2F000ACB4AE /* StatefulViewController.swift in Sources */,
+				D5D3340A2015E2F000ACB4AE /* StateMachine.swift in Sources */,
+				D5D334042015E2F000ACB4AE /* ApplicationState.swift in Sources */,
+				D5D334002015E2F000ACB4AE /* NotRunningApplicationState.swift in Sources */,
+				D5D333FE2015E2F000ACB4AE /* DisappearedViewControllerState.swift in Sources */,
+				D5D333F92015E2F000ACB4AE /* ApplicationStateMachine.swift in Sources */,
+				D5D334032015E2F000ACB4AE /* InactiveApplicationState.swift in Sources */,
+				D5D3340C2015E2F000ACB4AE /* State.swift in Sources */,
+				D5D334012015E2F000ACB4AE /* AppearedViewControllerState.swift in Sources */,
+				D5D333FF2015E2F000ACB4AE /* SuspendedApplicationState.swift in Sources */,
+				D5D333FC2015E2F000ACB4AE /* ViewControllerState.swift in Sources */,
+				D5D333FD2015E2F000ACB4AE /* AppearingViewControllerState.swift in Sources */,
+				D5D334052015E2F000ACB4AE /* BackgroundApplicationState.swift in Sources */,
+				D5D334022015E2F000ACB4AE /* DisappearingViewControllerState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,9 +508,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D3336B2014A83A00ACB4AE /* StatefulViewControllerTests.swift in Sources */,
-				D5D3336C2014A83A00ACB4AE /* ApplicationStateMachineTests.swift in Sources */,
-				D53DFB72201351E000DC7CFE /* StateMachineTests.swift in Sources */,
+				D5D334272015E31500ACB4AE /* StatefulViewControllerTests.swift in Sources */,
+				D5D334292015E31500ACB4AE /* ApplicationStateMachineTests.swift in Sources */,
+				D5D334282015E31500ACB4AE /* StateMachineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,13 +518,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D3339820150B7700ACB4AE /* AppearedViewControllerState.swift in Sources */,
-				D5D3339620150B7700ACB4AE /* DisappearedViewControllerState.swift in Sources */,
-				D5D3339720150B7700ACB4AE /* AppearingViewControllerState.swift in Sources */,
-				D5D3339920150B7700ACB4AE /* DisappearingViewControllerState.swift in Sources */,
-				D5D3339520150B7700ACB4AE /* ViewControllerState.swift in Sources */,
-				D5D3338B20150B7700ACB4AE /* StateMachine.swift in Sources */,
-				D5D3338C20150B7700ACB4AE /* State.swift in Sources */,
+				D5D3342A2015E32400ACB4AE /* StateMachine.swift in Sources */,
+				D5D3342B2015E32400ACB4AE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,21 +527,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D333B420150FF700ACB4AE /* AppearedViewControllerState.swift in Sources */,
-				D5D333AE20150FF700ACB4AE /* BackgroundApplicationState.swift in Sources */,
-				D5D333B220150FF700ACB4AE /* DisappearedViewControllerState.swift in Sources */,
-				D5D333B320150FF700ACB4AE /* AppearingViewControllerState.swift in Sources */,
-				D5D333B520150FF700ACB4AE /* DisappearingViewControllerState.swift in Sources */,
-				D5D333B120150FF700ACB4AE /* ViewControllerState.swift in Sources */,
-				D5D333A720150FF700ACB4AE /* StateMachine.swift in Sources */,
-				D5D333B020150FF700ACB4AE /* StatefulViewController.swift in Sources */,
-				D5D333AF20150FF700ACB4AE /* SuspendedApplicationState.swift in Sources */,
-				D5D333AB20150FF700ACB4AE /* NotRunningApplicationState.swift in Sources */,
-				D5D333A820150FF700ACB4AE /* State.swift in Sources */,
-				D5D333AA20150FF700ACB4AE /* ApplicationState.swift in Sources */,
-				D5D333A920150FF700ACB4AE /* ApplicationStateMachine.swift in Sources */,
-				D5D333AC20150FF700ACB4AE /* InactiveApplicationState.swift in Sources */,
-				D5D333AD20150FF700ACB4AE /* ActiveApplicationState.swift in Sources */,
+				D5D334202015E30B00ACB4AE /* SuspendedApplicationState.swift in Sources */,
+				D5D3341D2015E30B00ACB4AE /* ViewControllerState.swift in Sources */,
+				D5D3341F2015E30B00ACB4AE /* DisappearedViewControllerState.swift in Sources */,
+				D5D3341E2015E30B00ACB4AE /* AppearingViewControllerState.swift in Sources */,
+				D5D334242015E30B00ACB4AE /* InactiveApplicationState.swift in Sources */,
+				D5D3342C2015E32500ACB4AE /* StateMachine.swift in Sources */,
+				D5D334212015E30B00ACB4AE /* NotRunningApplicationState.swift in Sources */,
+				D5D334252015E30B00ACB4AE /* ApplicationState.swift in Sources */,
+				D5D3342D2015E32500ACB4AE /* State.swift in Sources */,
+				D5D334262015E30B00ACB4AE /* BackgroundApplicationState.swift in Sources */,
+				D5D3341B2015E30B00ACB4AE /* ActiveApplicationState.swift in Sources */,
+				D5D3341A2015E30B00ACB4AE /* ApplicationStateMachine.swift in Sources */,
+				D5D334222015E30B00ACB4AE /* AppearedViewControllerState.swift in Sources */,
+				D5D3341C2015E30B00ACB4AE /* StatefulViewController.swift in Sources */,
+				D5D334232015E30B00ACB4AE /* DisappearingViewControllerState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,13 +549,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D333D12015107400ACB4AE /* AppearedViewControllerState.swift in Sources */,
-				D5D333CF2015107400ACB4AE /* DisappearedViewControllerState.swift in Sources */,
-				D5D333D02015107400ACB4AE /* AppearingViewControllerState.swift in Sources */,
-				D5D333D22015107400ACB4AE /* DisappearingViewControllerState.swift in Sources */,
-				D5D333CE2015107400ACB4AE /* ViewControllerState.swift in Sources */,
-				D5D333C42015107400ACB4AE /* StateMachine.swift in Sources */,
-				D5D333C52015107400ACB4AE /* State.swift in Sources */,
+				D5D3342E2015E32600ACB4AE /* StateMachine.swift in Sources */,
+				D5D3342F2015E32600ACB4AE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +600,7 @@
 				CURRENT_PROJECT_VERSION = "$(DYLIB_CURRENT_VERSION)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = 0.1.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -567,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = StateMachine/Info.plist;
+				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -622,7 +673,7 @@
 				CURRENT_PROJECT_VERSION = "$(DYLIB_CURRENT_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = 0.1.1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -634,7 +685,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = StateMachine/Info.plist;
+				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -675,7 +726,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				INFOPLIST_FILE = StateMachineTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.StateMachine.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -687,7 +738,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				INFOPLIST_FILE = StateMachineTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.StateMachine.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

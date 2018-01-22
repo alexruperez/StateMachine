@@ -14,7 +14,7 @@
     <a title="StateMachine Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">StateMachine Docs</a> (0% documented)</p>
+        <p><a href="../index.html">StateMachine Docs</a> (77% documented)</p>
         <p class="header-right"><a href="https://github.com/alexruperez/StateMachine"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Falexruperez%2Egithub%2Eio%2Fdocsets%2FStateMachine%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -110,12 +110,72 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Models a finite state machine that has a single current state.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12StateMachineAAC16SubscribeClosurea"></a>
+                    <a name="//apple_ref/swift/Alias/SubscribeClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12StateMachineAAC16SubscribeClosurea">SubscribeClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SubscribeClosure</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">previous</span><span class="p">:</span> <span class="kt"><a href="../Protocols/State.html">State</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">current</span><span class="p">:</span> <span class="kt"><a href="../Protocols/State.html">State</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>previous</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the state that was exited, this is nil if this is the state machine&rsquo;s first entered state</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>current</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the state that is being entered next</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L17">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -129,7 +189,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The current state that the state machine is in.
+Prior to the first called to enterState this is equal to nil.</p>
 
                       </div>
                       <div class="declaration">
@@ -141,7 +202,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -159,7 +220,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Create a finite state machine.</p>
 
                       </div>
                       <div class="declaration">
@@ -170,8 +231,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>states</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the finite state machine possible states</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L19-L21">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L27-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -189,7 +269,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Updates the current state machine.</p>
 
                       </div>
                       <div class="declaration">
@@ -200,8 +280,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deltaTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the time, in seconds, since the last frame</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L23-L25">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L33-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -219,19 +318,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Subscribes to machine state changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">SubscribeClosure</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SubscriptionIndex</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/StateMachine.html#/s:12StateMachineAAC16SubscribeClosurea">SubscribeClosure</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SubscriptionIndex</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>subscription closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>subscription index for unsubscribe</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L27-L30">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L40-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -249,7 +371,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Unsubscribes a subscriber to machine state changes.</p>
 
                       </div>
                       <div class="declaration">
@@ -260,8 +382,57 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>subscription index</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L32-L38">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L47-L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12StateMachineAAC14unsubscribeAllyyF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribeAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12StateMachineAAC14unsubscribeAllyyF">unsubscribeAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unsubscribes all subscribers to machine state changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribeAll</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L56-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -279,7 +450,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns true if the indicated class is a valid next state or if current is nil.</p>
 
                       </div>
                       <div class="declaration">
@@ -290,8 +461,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the class of the state to be tested</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L40-L42">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L62-L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -309,7 +499,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Calls canEnterState to check if we can enter the given state and then enters that state if so.
+State.willExit(to:) is called on the old current state.
+State.didEnter(from:) is called on the new state.</p>
 
                       </div>
                       <div class="declaration">
@@ -320,8 +512,31 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the class of the state to switch to</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>true if state was entered, false otherwise</p>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L44-L54">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L71-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -339,7 +554,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Gets the state of the indicated class.
+Returns nil if the state machine does not have this state.</p>
 
                       </div>
                       <div class="declaration">
@@ -350,8 +566,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forClass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the type of the state you want to get</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/alexruperez/StateMachine/tree/master/StateMachine/StateMachine.swift#L56-L58">Show on GitHub</a>
+                        <a href="https://github.com/alexruperez/StateMachine/tree/master/Core/StateMachine.swift#L86-L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -361,7 +596,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.alexruperez.com" target="_blank" rel="external">alexruperez</a>. All rights reserved. (Last updated: 2018-01-21)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.alexruperez.com" target="_blank" rel="external">alexruperez</a>. All rights reserved. (Last updated: 2018-01-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
