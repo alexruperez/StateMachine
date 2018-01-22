@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ArchitStateMachine'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'State machine creation framework written in Swift inspired by GKStateMachine from Apple GameplayKit'
 
   s.homepage         = 'https://github.com/alexruperez/StateMachine'
