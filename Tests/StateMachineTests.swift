@@ -140,5 +140,12 @@ class StateMachineTests: XCTestCase {
         XCTAssert(stateMachine.unsubscribe(index))
         XCTAssertFalse(stateMachine.unsubscribe(index))
     }
+
+    func testUnsubscribeAll() {
+        let index = stateMachine.subscribe { _, _ in }
+        XCTAssert(stateMachine.enter(StateA.self))
+        stateMachine.unsubscribeAll()
+        XCTAssertFalse(stateMachine.unsubscribe(index))
+    }
     
 }

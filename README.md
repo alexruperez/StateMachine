@@ -96,11 +96,13 @@ stateMachine.enter(OtherValidNextState.self)
 #### Subscribe/unsubscribe to State changes:
 
 ```swift
-let subscriptionIndex = stateMachine.subscribe { (previous, current) in
+let subscriptionToken = stateMachine.subscribe { (previous, current) in
     // Your code here
 }
 
-stateMachine.unsubscribe(subscriptionIndex)
+stateMachine.unsubscribe(subscriptionToken)
+
+stateMachine.unsubscribeAll()
 ```
 
 #### UIApplication and UIApplicationDelegate extensions with application life cycle State Machine embedded:

@@ -11,7 +11,7 @@ import Foundation
 /// Models a finite state machine that has a single current state.
 public class StateMachine {
     
-    public typealias SubscriptionIndex = Int
+    public typealias SubscriptionToken = UUID
     /// - Parameter previous: the state that was exited, this is nil if this is the state machine's first entered state
     /// - Parameter current: the state that is being entered next
     public typealias SubscribeClosure = (_ previous: State?, _ current: State) -> Void
@@ -20,7 +20,7 @@ public class StateMachine {
     /// Prior to the first called to enterState this is equal to nil.
     public private(set) var current: State?
     private let states: [State]
-    private var subscriptions = [SubscribeClosure]()
+    private var subscriptions = [SubscriptionToken: SubscribeClosure]()
 
     /// Create a finite state machine.
     /// - Parameter states: the finite state machine possible states
@@ -36,20 +36,17 @@ public class StateMachine {
 
     /// Subscribes to machine state changes.
     /// - Parameter closure: subscription closure
-    /// - Returns: subscription index for unsubscribe
-    @discardableResult public func subscribe(_ closure: @escaping SubscribeClosure) -> SubscriptionIndex {
-        subscriptions.append(closure)
-        return subscriptions.count - 1
+    /// - Returns: subscription token for unsubscribe
+    @discardableResult public func subscribe(_ closure: @escaping SubscribeClosure) -> SubscriptionToken {
+        let subscriptionToken = UUID()
+        subscriptions[subscriptionToken] = closure
+        return subscriptionToken
     }
 
     /// Unsubscribes a subscriber to machine state changes.
-    /// - Parameter index: subscription index
-    public func unsubscribe(_ index: SubscriptionIndex) -> Bool {
-        guard subscriptions.count > index else {
-            return false
-        }
-        _ = subscriptions.remove(at: index)
-        return true
+    /// - Parameter token: subscription token
+    public func unsubscribe(_ token: SubscriptionToken) -> Bool {
+        return subscriptions.removeValue(forKey: token) != nil
     }
 
     /// Unsubscribes all subscribers to machine state changes.
@@ -75,7 +72,7 @@ public class StateMachine {
         let previous = current
         previous?.willExit(to: next)
         current = next
-        subscriptions.forEach { $0(previous, next) }
+        subscriptions.values.forEach { $0(previous, next) }
         next.didEnter(from: previous)
         return true
     }
