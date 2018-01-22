@@ -12,6 +12,8 @@
 
 Swift library to create [**Finite-state machines**](https://en.wikipedia.org/wiki/Finite-state_machine) inspired by [GKStateMachine](https://developer.apple.com/documentation/gameplaykit/gkstatemachine) from Apple [GameplayKit](https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/StateMachine.html) framework.
 
+[**Test StateMachine working live!**](https://appetize.io/app/1rzk2knb6927f4m08vpjtg4mmr?device=iphone8&scale=75&orientation=landscape&osVersion=11.1&deviceColor=black)
+
 ## 🌟 Features
 
 - [x] Define States and Their Behavior.
