@@ -28,11 +28,18 @@ public protocol NotificationCenterProtocol {
     /// - Parameter aName: the name of the notification
     /// - Parameter anObject: the object posting the notification
     func post(name aName: Notification.Name, object anObject: Any?)
-    /// Adds an entry to the notification center's dispatch table with an observer and a notification selector, and an optional notification name and sender.
+    /// Adds an entry to the notification center's dispatch table with an observer and a notification selector,
+    /// and an optional notification name and sender.
     /// - Parameter observer: the object registering as an observer
-    /// - Parameter aSelector: the selector that specifies the message the receiver sends observer to notify it of the notification posting, the method specified by aSelector must have one and only one argument (an instance of Notification)
-    /// - Parameter aName: the name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer. If you pass nil, the notification center doesn’t use a notification’s name to decide whether to deliver it to the observer
-    /// - Parameter anObject: the object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer. If you pass nil, the notification center doesn’t use a notification’s sender to decide whether to deliver it to the observer
+    /// - Parameter aSelector: the selector that specifies the message the receiver sends observer to notify it of the
+    /// notification posting, the method specified by aSelector must have one and only one argument (an instance of
+    /// Notification)
+    /// - Parameter aName: the name of the notification for which to register the observer; that is, only notifications
+    /// with this name are delivered to the observer. If you pass nil, the notification center doesn’t use a
+    /// notification’s name to decide whether to deliver it to the observer
+    /// - Parameter anObject: the object whose notifications the observer wants to receive; that is, only notifications
+    /// sent by this sender are delivered to the observer. If you pass nil, the notification center doesn’t use a
+    /// notification’s sender to decide whether to deliver it to the observer
     func addObserver(_ observer: Any, selector aSelector: Selector, name aName: Notification.Name?, object anObject: Any?)
     /// Removes all entries specifying a given observer from the notification center's dispatch table.
     /// - Parameter observer: the observer to remove

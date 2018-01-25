@@ -17,7 +17,8 @@ public protocol State {
     func isValidNext<S: State>(state type: S.Type) -> Bool
 
     /// Called by StateMachine when this state is entered.
-    /// - Parameter previous: the state that was exited to enter this state, this is nil if this is the state machine's first entered state
+    /// - Parameter previous: the state that was exited to enter this state,
+    /// this is nil if this is the state machine's first entered state
     func didEnter(from previous: State?)
 
     /// Called by StateMachine when it is updated.
