@@ -49,7 +49,7 @@ public protocol NotificationCenterProtocol {
 extension NotificationCenter: NotificationCenterProtocol {}
 
 /// Application life cycle state machine that has a single current state.
-public class ApplicationStateMachine: StateMachine {
+public class ApplicationStateMachine: StateMachine<ApplicationState, ApplicationEvent> {
 
     /// Application life cycle state machine shared instance.
     public static let shared = ApplicationStateMachine()
@@ -58,20 +58,30 @@ public class ApplicationStateMachine: StateMachine {
     private(set) var notificationCenter: NotificationCenterProtocol!
     /// The running state of the application.
     public var applicationState: UIApplicationState? {
-        return (current as? ApplicationState)?.applicationState
+        return current.applicationState
     }
+    private let event = ApplicationEvent()
+    private let foreground = ForegroundEvent()
+    private let background = BackgroundEvent()
 
     /// Create an application life cycle state machine.
     /// - Parameter notificationCenter: notification dispatch mechanism implementation
     public convenience init(_ notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
-        self.init([NotRunningApplicationState(),
-                   InactiveApplicationState(),
-                   ActiveApplicationState(),
-                   BackgroundApplicationState(),
-                   SuspendedApplicationState()])
+        self.init(initial: NotRunningApplicationState())
+        let inactive = InactiveApplicationState()
+        let active = ActiveApplicationState()
+        let backgroundState = BackgroundApplicationState()
+        let suspended = SuspendedApplicationState()
+        let notRunning = current
+        self[notRunning] = [foreground: inactive]
+        self[inactive] = [foreground: active]
+        self[active] = [foreground: inactive]
+        self[inactive] = [background: backgroundState]
+        self[backgroundState] = [event: suspended]
+        self[backgroundState] = [foreground: inactive]
+        self[suspended] = [event: notRunning]
         self.notificationCenter = notificationCenter
         observeApplication()
-        enter(NotRunningApplicationState.self)
     }
 
     private func observeApplication() {
@@ -88,27 +98,27 @@ public class ApplicationStateMachine: StateMachine {
     }
 
     @objc private func applicationDidFinishLaunching(_ notification: Notification) {
-        enter(InactiveApplicationState.self)
+        _ = self[foreground]
     }
 
     @objc private func applicationDidBecomeActive(_ notification: Notification) {
-        enter(ActiveApplicationState.self)
+        _ = self[foreground]
     }
 
     @objc private func applicationDidEnterBackground(_ notification: Notification) {
-        enter(BackgroundApplicationState.self)
+        _ = self[background]
     }
 
     @objc private func applicationWillResignActive(_ notification: Notification) {
-        enter(InactiveApplicationState.self)
+        _ = self[foreground]
     }
 
     @objc private func applicationWillEnterForeground(_ notification: Notification) {
-        enter(InactiveApplicationState.self)
+        _ = self[foreground]
     }
 
     @objc private func applicationWillTerminate(_ notification: Notification) {
-        enter(SuspendedApplicationState.self)
+        _ = self[event]
     }
 
     deinit {

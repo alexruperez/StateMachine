@@ -11,9 +11,9 @@ import Foundation
 /// Suspended application state.
 public class SuspendedApplicationState: ApplicationState {
     
-    public override func isValidNext<S: State>(state type: S.Type) -> Bool {
-        switch type {
-        case is BackgroundApplicationState.Type, is NotRunningApplicationState.Type:
+    public override func isValid<E>(next state: ApplicationState, when event: E) -> Bool where E : Event {
+        switch state {
+        case is BackgroundApplicationState, is NotRunningApplicationState:
             return true
         default:
             return false

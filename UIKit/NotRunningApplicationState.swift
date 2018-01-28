@@ -11,7 +11,7 @@ import Foundation
 /// Not running application state.
 public class NotRunningApplicationState: ApplicationState {
     
-    public override func isValidNext<S: State>(state type: S.Type) -> Bool {
-        return type is InactiveApplicationState.Type
+    public override func isValid<E>(next state: ApplicationState, when event: E) -> Bool where E : Event {
+        return state is InactiveApplicationState
     }
 }

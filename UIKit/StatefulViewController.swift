@@ -12,37 +12,38 @@ import UIKit
 open class StatefulViewController: UIViewController {
 
     /// UIViewController life cycle state machine.
-    public let stateMachine = StateMachine([DisappearedViewControllerState(),
-                                            AppearingViewControllerState(),
-                                            AppearedViewControllerState(),
-                                            DisappearingViewControllerState()])
+    public let stateMachine = StateMachine<ViewControllerState, ViewControllerEvent>(initial: DisappearedViewControllerState())
+    private let event = ViewControllerEvent()
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        stateMachine.enter(DisappearedViewControllerState.self)
+        let appearing = AppearingViewControllerState()
+        let appeared = AppearedViewControllerState()
+        let disappearing = DisappearingViewControllerState()
+        let disappeared = stateMachine.current
+        stateMachine[disappeared] = [event: appearing]
+        stateMachine[appearing] = [event: appeared]
+        stateMachine[appeared] = [event: disappearing]
+        stateMachine[disappearing] = [event: disappeared]
     }
 
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        (stateMachine.state(AppearingViewControllerState.self) as? ViewControllerState)?.animated = animated
-        stateMachine.enter(AppearingViewControllerState.self)
+        stateMachine[event]?.animated = animated
     }
 
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        (stateMachine.state(AppearedViewControllerState.self) as? ViewControllerState)?.animated = animated
-        stateMachine.enter(AppearedViewControllerState.self)
+        stateMachine[event]?.animated = animated
     }
 
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        (stateMachine.state(DisappearingViewControllerState.self) as? ViewControllerState)?.animated = animated
-        stateMachine.enter(DisappearingViewControllerState.self)
+        stateMachine[event]?.animated = animated
     }
 
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        (stateMachine.state(DisappearedViewControllerState.self) as? ViewControllerState)?.animated = animated
-        stateMachine.enter(DisappearedViewControllerState.self)
+        stateMachine[event]?.animated = animated
     }
 }

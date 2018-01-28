@@ -10,6 +10,10 @@ import SpriteKit
 import StateMachine
 
 class ServeState: DispenserState {
+    public override var hashValue: Int {
+        return 4
+    }
+
     // MARK: Properties
     
     /// A multiplier for the speed of the dispensing animation.
@@ -22,19 +26,19 @@ class ServeState: DispenserState {
     }
     
     // MARK: State methods
-    
-    override func didEnter(from previousState: State?) {
-        super.didEnter(from: previousState)
+
+    override func didEnter<E>(from previous: DispenserState?, because event: E) where E : Event {
+        super.didEnter(from: previous, because: event)
         playDispensingAnimationThenExit()
     }
 
-    override func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    override func isValid<E>(next state: DispenserState, when event: E) -> Bool where E : Event {
         /*
          This state can only transition to the partially full and empty
          states.
          */
-        switch type {
-        case is PartiallyFullState.Type, is EmptyState.Type:
+        switch state {
+        case is PartiallyFullState, is EmptyState:
             return true
 
         default:
@@ -86,10 +90,10 @@ class ServeState: DispenserState {
         game.scene?.run(groupAction, completion: {
             let waterNode = self.game.childNode(withName: "//water") as! SKSpriteNode
             if waterNode.size.height < 1 {
-                self.game.stateMachine?.enter(EmptyState.self)
+                _ = self.game.stateMachine[self.game.fill]
             }
             else {
-                self.game.stateMachine?.enter(PartiallyFullState.self)
+                _ = self.game.stateMachine[self.game.serve]
             }
         }) 
     }

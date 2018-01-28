@@ -10,6 +10,9 @@ import SpriteKit
 import StateMachine
 
 class PartiallyFullState: DispenserState {
+    public override var hashValue: Int {
+        return 1
+    }
     
     // MARK: Initialization
     
@@ -19,10 +22,10 @@ class PartiallyFullState: DispenserState {
     
     // MARK: State methods
 
-    override func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    override func isValid<E>(next state: DispenserState, when event: E) -> Bool where E : Event {
         // This state can only transition to the serve and refilling states.
-        switch type {
-        case is ServeState.Type, is RefillingState.Type:
+        switch state {
+        case is ServeState, is RefillingState:
             return true
 
         default:

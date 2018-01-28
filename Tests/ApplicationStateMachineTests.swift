@@ -68,7 +68,7 @@ class ApplicationStateMachineTests: XCTestCase {
         stateMachine.notificationCenter.post(name: .UIApplicationDidFinishLaunching, object: nil)
         stateMachine.notificationCenter.post(name: .UIApplicationDidBecomeActive, object: nil)
         XCTAssert(stateMachine.current is ActiveApplicationState)
-        XCTAssertEqual((stateMachine.current as? ApplicationState)?.applicationState, .active)
+        XCTAssertEqual(stateMachine.current.applicationState, .active)
         stateMachine.notificationCenter.post(name: .UIApplicationWillResignActive, object: nil)
         XCTAssert(stateMachine.current is InactiveApplicationState)
         XCTAssertEqual(stateMachine.applicationState, .inactive)

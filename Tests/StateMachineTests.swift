@@ -9,22 +9,46 @@
 import XCTest
 @testable import StateMachine
 
-class StateA: State {
+class TestEvent: Event {
+    var hashValue: Int {
+        return -1
+    }
+}
+
+class TestState: State {
+    var hashValue: Int {
+        return -1
+    }
+
+    func isValid<E>(next state: TestState, when event: E) -> Bool where E : Event {
+        return false
+    }
+}
+
+class StateA: TestState {
+    override var hashValue: Int {
+        return 0
+    }
+
     var deltaTime: TimeInterval = 0
 
     func update(_ deltaTime: TimeInterval) {
         self.deltaTime = deltaTime
     }
 
-    func isValidNext<S>(state type: S.Type) -> Bool where S : State {
-        return type is StateB.Type
+    override func isValid<E>(next state: TestState, when event: E) -> Bool where E : Event {
+        return state is StateB
     }
 }
 
-class StateB: State {
-    func isValidNext<S>(state type: S.Type) -> Bool where S : State {
-        switch type {
-        case is StateA.Type, is StateC.Type:
+class StateB: TestState {
+    override var hashValue: Int {
+        return 1
+    }
+
+    override func isValid<E>(next state: TestState, when event: E) -> Bool where E : Event {
+        switch state {
+        case is StateA, is StateC:
             return true
         default:
             return false
@@ -32,19 +56,30 @@ class StateB: State {
     }
 }
 
-class StateC: State {
-    func isValidNext<S>(state type: S.Type) -> Bool where S : State {
-        return type is StateA.Type
+class StateC: TestState {
+    override var hashValue: Int {
+        return 2
+    }
+
+    override func isValid<E>(next state: TestState, when event: E) -> Bool where E : Event {
+        return state is StateA
     }
 }
 
 class StateMachineTests: XCTestCase {
 
-    var stateMachine: StateMachine!
+    var stateMachine: StateMachine<TestState, TestEvent>!
+    let event = TestEvent()
     
     override func setUp() {
         super.setUp()
-        stateMachine = StateMachine([StateA(), StateB(), StateC()])
+        stateMachine = StateMachine<TestState, TestEvent>(initial: StateA())
+        let stateA = stateMachine.current
+        let stateB = StateB()
+        let stateC = StateC()
+        stateMachine[stateA] = [event: stateB]
+        stateMachine[stateB] = [event: stateC]
+        stateMachine[stateC] = [event: stateA]
     }
     
     override func tearDown() {
@@ -53,97 +88,94 @@ class StateMachineTests: XCTestCase {
     }
     
     func testStartWithA() {
-        XCTAssertNil(stateMachine.current)
-        XCTAssert(stateMachine.enter(StateA.self))
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateA)
     }
 
     func testStartWithB() {
-        XCTAssertNil(stateMachine.current)
-        XCTAssert(stateMachine.enter(StateB.self))
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateB)
     }
 
     func testStartWithC() {
-        XCTAssertNil(stateMachine.current)
-        XCTAssert(stateMachine.enter(StateC.self))
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateC)
     }
 
     func testAB() {
-        XCTAssert(stateMachine.enter(StateA.self))
-        XCTAssert(stateMachine.enter(StateB.self))
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateB)
     }
 
     func testBC() {
-        XCTAssert(stateMachine.enter(StateB.self))
-        XCTAssert(stateMachine.enter(StateC.self))
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateC)
     }
 
     func testCA() {
-        XCTAssert(stateMachine.enter(StateC.self))
-        XCTAssert(stateMachine.enter(StateA.self))
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateA)
     }
 
     func testABA() {
-        XCTAssert(stateMachine.enter(StateA.self))
-        XCTAssert(stateMachine.enter(StateB.self))
-        XCTAssert(stateMachine.enter(StateA.self))
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNotNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateA)
     }
 
     func testAC() {
-        XCTAssert(stateMachine.enter(StateA.self))
-        XCTAssertFalse(stateMachine.enter(StateC.self))
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateA)
     }
 
     func testCB() {
-        XCTAssert(stateMachine.enter(StateC.self))
-        XCTAssertFalse(stateMachine.enter(StateB.self))
+        XCTAssertNotNil(stateMachine[event])
+        XCTAssertNil(stateMachine[event])
         XCTAssertNotNil(stateMachine.current)
         XCTAssert(stateMachine.current is StateC)
     }
 
     func testUpdate() {
-        XCTAssert(stateMachine.enter(StateA.self))
+        XCTAssertNotNil(stateMachine[event])
         let deltaTime = TimeInterval(arc4random_uniform(10) + 1)
         stateMachine.update(deltaTime)
         XCTAssertEqual((stateMachine.current as? StateA)?.deltaTime, deltaTime)
-        XCTAssert(stateMachine.enter(StateB.self))
+        XCTAssertNotNil(stateMachine[event])
         stateMachine.update(deltaTime)
     }
 
     func testSubscribe() {
-        stateMachine.subscribe { (previous, current) in
+        stateMachine.subscribe { (previous, event, current) in
             XCTAssertNil(previous)
             XCTAssertNotNil(current)
             XCTAssert(current is StateA)
         }
-        XCTAssert(stateMachine.enter(StateA.self))
+        XCTAssertNotNil(stateMachine[event])
     }
 
     func testUnsubscribe() {
-        let index = stateMachine.subscribe { _, _ in }
-        XCTAssert(stateMachine.enter(StateA.self))
+        let index = stateMachine.subscribe { _, _, _ in }
+        XCTAssertNotNil(stateMachine[event])
         XCTAssert(stateMachine.unsubscribe(index))
         XCTAssertFalse(stateMachine.unsubscribe(index))
     }
 
     func testUnsubscribeAll() {
-        let index = stateMachine.subscribe { _, _ in }
-        XCTAssert(stateMachine.enter(StateA.self))
+        let index = stateMachine.subscribe { _, _, _ in }
+        XCTAssertNotNil(stateMachine[event])
         stateMachine.unsubscribeAll()
         XCTAssertFalse(stateMachine.unsubscribe(index))
     }

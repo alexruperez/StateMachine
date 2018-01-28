@@ -18,7 +18,7 @@ class GameViewController: StatefulViewController {
     // MARK: Methods
     
     override func viewDidLoad() {
-        stateMachine.subscribe { _, current in
+        stateMachine.subscribe { _, _, current in
             print(current)
         }
         

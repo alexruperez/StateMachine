@@ -10,6 +10,10 @@ import SpriteKit
 import StateMachine
 
 class RefillingState: DispenserState {
+    public override var hashValue: Int {
+        return 3
+    }
+    
     // MARK: Properties
     
     /// A multiplier for the speed of the refilling animation.
@@ -28,15 +32,15 @@ class RefillingState: DispenserState {
     }
     
     // MARK: State methods
-    
-    override func didEnter(from previousState: State?) {
-        super.didEnter(from: previousState)
+
+    override func didEnter<E>(from previous: DispenserState?, because event: E) where E : Event {
+        super.didEnter(from: previous, because: event)
         playRefillAnimationThenExit()
     }
 
-    override func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    override func isValid<E>(next state: DispenserState, when event: E) -> Bool where E : Event {
         // This state can only transition to the full state.
-        return type is FullState.Type
+        return state is FullState
     }
     
     // MARK: Other Game Logic
@@ -60,7 +64,7 @@ class RefillingState: DispenserState {
         let refillAction = SKAction(named: "refillDispenser", duration: refillTime)!
         
         waterNode.run(refillAction, completion: {
-            self.game.stateMachine?.enter(FullState.self)
+            _ = self.game.stateMachine[self.game.serve]
         }) 
     }
 }

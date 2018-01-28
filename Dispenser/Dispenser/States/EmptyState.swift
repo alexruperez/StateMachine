@@ -10,6 +10,10 @@ import SpriteKit
 import StateMachine
 
 class EmptyState: DispenserState {
+    public override var hashValue: Int {
+        return 2
+    }
+
     // MARK: Properties
     
     /// Keeps track of time between indicator light toggles.
@@ -39,24 +43,24 @@ class EmptyState: DispenserState {
     }
     
     // MARK: State methods
-    
-    override func didEnter(from previousState: State?) {
-        super.didEnter(from: previousState)
+
+    override func didEnter<E>(from previous: DispenserState?, because event: E) where E : Event {
         // Turn on the indicator light with a red color.
+        super.didEnter(from: previous, because: event)
         let red = SKColor.red
         changeIndicatorLightToColor(red)
     }
-    
-    override func willExit(to nextState: State) {
-        super.willExit(to: nextState)
+
+    override func willExit<E>(to next: DispenserState, because event: E) where E : Event {
         // Turn on the indicator light with a green color.
+        super.willExit(to: next, because: event)
         let black = SKColor.black
         changeIndicatorLightToColor(black)
     }
 
-    override func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    override func isValid<E>(next state: DispenserState, when event: E) -> Bool where E : Event {
         // This state can only transition to the refilling state.
-        return type is RefillingState.Type
+        return state is RefillingState
     }
 
     func update(_ deltaTime: TimeInterval) {

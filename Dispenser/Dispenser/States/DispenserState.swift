@@ -9,7 +9,29 @@
 import SpriteKit
 import StateMachine
 
+public class DispenserEvent: Event {
+    public var hashValue: Int {
+        return -1
+    }
+}
+
+public class ServeEvent: DispenserEvent {
+    public override var hashValue: Int {
+        return 0
+    }
+}
+
+public class FillEvent: DispenserEvent {
+    public override var hashValue: Int {
+        return 1
+    }
+}
+
 class DispenserState: State {
+    public var hashValue: Int {
+        return -1
+    }
+    
     // MARK: Properties
     
     /// A reference to the game scene, used to alter sprites.
@@ -32,18 +54,18 @@ class DispenserState: State {
     
     // MARK: State methods
 
-    func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    func isValid<E>(next state: DispenserState, when event: E) -> Bool where E : Event {
         return false
     }
-    
+
     /// Highlights the sprite representing the state.
-    func didEnter(from previous: State?) {
+    func didEnter<E>(from previous: DispenserState?, because event: E) where E : Event {
         guard let associatedNode = associatedNode else { return }
         associatedNode.color = SKColor.lightGray
     }
-    
+
     /// Unhighlights the sprite representing the state.
-    func willExit(to next: State) {
+    func willExit<E>(to next: DispenserState, because event: E) where E : Event {
         guard let associatedNode = associatedNode else { return }
         associatedNode.color = SKColor.darkGray
     }

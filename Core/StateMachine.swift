@@ -9,29 +9,38 @@
 import Foundation
 
 /// Models a finite state machine that has a single current state.
-public class StateMachine {
+public class StateMachine<S: State, E: Event> {
     
     public typealias SubscriptionToken = UUID
     /// - Parameter previous: the state that was exited, this is nil if this is the state machine's first entered state
     /// - Parameter current: the state that is being entered next
-    public typealias SubscribeClosure = (_ previous: State?, _ current: State) -> Void
+    public typealias SubscribeClosure = (_ previous: S, _ event: E, _ current: S) -> Void
 
     /// The current state that the state machine is in.
     /// Prior to the first called to enterState this is equal to nil.
-    public private(set) var current: State?
-    private let states: [State]
+    public private(set) var current: S
+    private var states: [S : [E : S]] = [:]
     private var subscriptions = [SubscriptionToken: SubscribeClosure]()
 
     /// Create a finite state machine.
     /// - Parameter states: the finite state machine possible states
-    public init(_ states: [State]) {
-        self.states = states
+    public init(initial state: S) {
+        self.current = state
+    }
+
+    public subscript(state: S) -> [E : S]? {
+        get {
+            return states[state]
+        }
+        set {
+            states[state] = newValue
+        }
     }
 
     /// Updates the current state machine.
     /// - Parameter deltaTime: the time, in seconds, since the last frame
     public func update(_ deltaTime: TimeInterval) {
-        current?.update(deltaTime)
+        current.update(deltaTime)
     }
 
     /// Subscribes to machine state changes.
@@ -56,8 +65,8 @@ public class StateMachine {
 
     /// Returns true if the indicated class is a valid next state or if current is nil.
     /// - Parameter type: the class of the state to be tested
-    public func canEnterState<S: State>(_ type: S.Type) -> Bool {
-        return current == nil || current?.isValidNext(state: type) == true
+    public func can(enter state: S, when event: E) -> Bool {
+        return current.isValid(next: state, when: event)
     }
 
     /// Calls canEnterState to check if we can enter the given state and then enters that state if so.
@@ -65,22 +74,16 @@ public class StateMachine {
     /// State.didEnter(from:) is called on the new state.
     /// - Parameter type: the class of the state to switch to
     /// - Returns: true if state was entered, false otherwise
-    @discardableResult public func enter<S: State>(_ type: S.Type) -> Bool {
-        guard canEnterState(type), let next = state(type) else {
-            return false
+    public subscript(_ event: E) -> S? {
+        guard let next = states[current]?[event], can(enter: next, when: event) else {
+            return nil
         }
         let previous = current
-        previous?.willExit(to: next)
+        previous.willExit(to: next, because: event)
         current = next
-        subscriptions.values.forEach { $0(previous, next) }
-        next.didEnter(from: previous)
-        return true
+        subscriptions.values.forEach { $0(previous, event, next) }
+        next.didEnter(from: previous, because: event)
+        return next
     }
 
-    /// Gets the state of the indicated class.
-    /// Returns nil if the state machine does not have this state.
-    /// - Parameter forClass: the type of the state you want to get
-    public func state<S: State>(_ type: S.Type) -> State? {
-        return states.first { $0 is S }
-    }
 }

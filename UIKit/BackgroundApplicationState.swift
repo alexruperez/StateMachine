@@ -16,9 +16,9 @@ public class BackgroundApplicationState: ApplicationState {
         applicationState = .background
     }
 
-    public override func isValidNext<S: State>(state type: S.Type) -> Bool {
-        switch type {
-        case is InactiveApplicationState.Type, is SuspendedApplicationState.Type:
+    public override func isValid<E>(next state: ApplicationState, when event: E) -> Bool where E : Event {
+        switch state {
+        case is InactiveApplicationState, is SuspendedApplicationState:
             return true
         default:
             return false

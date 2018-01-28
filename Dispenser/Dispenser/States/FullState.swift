@@ -10,6 +10,9 @@ import SpriteKit
 import StateMachine
 
 class FullState: DispenserState {
+    public override var hashValue: Int {
+        return 0
+    }
     
     // MARK: Initialization
     
@@ -18,23 +21,23 @@ class FullState: DispenserState {
     }
     
     // MARK: State methods
-    
-    override func didEnter(from previousState: State?) {
-        super.didEnter(from: previousState)
+
+    override func didEnter<E>(from previous: DispenserState?, because event: E) where E : Event {
         // Turn on the indicator light with a green color.
+        super.didEnter(from: previous, because: event)
         let greenColor = SKColor.green
         changeIndicatorLightToColor(greenColor)
     }
-    
-    override func willExit(to nextState: State) {
-        super.willExit(to: nextState)
+
+    override func willExit<E>(to next: DispenserState, because event: E) where E : Event {
         // Turn off the indicator light.
+        super.willExit(to: next, because: event)
         let blackColor = SKColor.black
         changeIndicatorLightToColor(blackColor)
     }
 
-    override func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    override func isValid<E>(next state: DispenserState, when event: E) -> Bool where E : Event {
         // This state can only transition to the serve state.
-        return type is ServeState.Type
+        return state is ServeState
     }
 }

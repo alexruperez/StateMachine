@@ -10,8 +10,11 @@ import Foundation
 
 /// Disappeared UIViewController state.
 public class DisappearedViewControllerState: ViewControllerState {
+    public override var hashValue: Int {
+        return 3
+    }
     
-    public override func isValidNext<S: State>(state type: S.Type) -> Bool {
-        return type is AppearingViewControllerState.Type
+    public override func isValid<E>(next state: ViewControllerState, when event: E) -> Bool where E : Event {
+        return state is AppearingViewControllerState
     }
 }

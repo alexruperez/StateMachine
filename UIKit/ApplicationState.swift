@@ -8,13 +8,35 @@
 
 import UIKit
 
+/// Application event.
+public class ApplicationEvent: Event {
+    public var hashValue: Int {
+        return -1
+    }
+}
+
+public class ForegroundEvent: ApplicationEvent {
+    public override var hashValue: Int {
+        return 0
+    }
+}
+
+public class BackgroundEvent: ApplicationEvent {
+    public override var hashValue: Int {
+        return 1
+    }
+}
+
 /// Application state.
 public class ApplicationState: State {
-
+    public var hashValue: Int {
+        return -1
+    }
+    
     /// The running state of the application for this state.
     public internal(set) var applicationState: UIApplicationState?
 
-    public func isValidNext<S>(state type: S.Type) -> Bool where S : State {
+    public func isValid<E>(next state: ApplicationState, when event: E) -> Bool where E : Event {
         return false
     }
 }

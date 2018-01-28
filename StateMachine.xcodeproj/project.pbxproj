@@ -7,36 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D510F181201CA1D600D5B1A0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D510F180201CA1D600D5B1A0 /* Event.swift */; };
+		D510F182201CA1D600D5B1A0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D510F180201CA1D600D5B1A0 /* Event.swift */; };
+		D510F183201CA1D600D5B1A0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D510F180201CA1D600D5B1A0 /* Event.swift */; };
+		D510F184201CA1D600D5B1A0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D510F180201CA1D600D5B1A0 /* Event.swift */; };
+		D510F188201CAE7F00D5B1A0 /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */; };
+		D510F189201CAE7F00D5B1A0 /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */; };
+		D510F18A201CAE7F00D5B1A0 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */; };
+		D510F18B201CAE7F00D5B1A0 /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */; };
+		D510F18C201CAE7F00D5B1A0 /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */; };
+		D510F18D201CAE7F00D5B1A0 /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */; };
+		D510F18E201CAE7F00D5B1A0 /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */; };
+		D510F18F201CAE7F00D5B1A0 /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */; };
+		D510F190201CAE7F00D5B1A0 /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */; };
+		D510F191201CAE7F00D5B1A0 /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */; };
+		D510F192201CAE7F00D5B1A0 /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */; };
+		D510F193201CAE7F00D5B1A0 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */; };
+		D510F194201CAE7F00D5B1A0 /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */; };
+		D510F195201CAE8000D5B1A0 /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */; };
+		D510F196201CAE8000D5B1A0 /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */; };
+		D510F197201CAE8000D5B1A0 /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */; };
+		D510F198201CAE8000D5B1A0 /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */; };
+		D510F199201CAE8000D5B1A0 /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */; };
+		D510F19A201CAE8000D5B1A0 /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */; };
+		D510F19B201CAE8000D5B1A0 /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */; };
+		D510F19C201CAE8000D5B1A0 /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */; };
+		D510F19D201CAE8000D5B1A0 /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */; };
+		D510F19E201CAE8000D5B1A0 /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */; };
+		D510F19F201CAE8000D5B1A0 /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */; };
+		D510F1A0201CAE8000D5B1A0 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */; };
+		D510F1A1201CAE8000D5B1A0 /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */; };
 		D53DFB6D201351E000DC7CFE /* StateMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53DFB63201351E000DC7CFE /* StateMachine.framework */; };
-		D5D333F92015E2F000ACB4AE /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */; };
-		D5D333FA2015E2F000ACB4AE /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */; };
-		D5D333FB2015E2F000ACB4AE /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */; };
-		D5D333FC2015E2F000ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */; };
-		D5D333FD2015E2F000ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */; };
-		D5D333FE2015E2F000ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */; };
-		D5D333FF2015E2F000ACB4AE /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */; };
-		D5D334002015E2F000ACB4AE /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */; };
-		D5D334012015E2F000ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */; };
-		D5D334022015E2F000ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */; };
-		D5D334032015E2F000ACB4AE /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */; };
-		D5D334042015E2F000ACB4AE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */; };
-		D5D334052015E2F000ACB4AE /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */; };
 		D5D3340A2015E2F000ACB4AE /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F52015E2F000ACB4AE /* StateMachine.swift */; };
 		D5D3340B2015E2F000ACB4AE /* StateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D333F62015E2F000ACB4AE /* StateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5D3340C2015E2F000ACB4AE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F72015E2F000ACB4AE /* State.swift */; };
-		D5D3341A2015E30B00ACB4AE /* ApplicationStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E22015E2EF00ACB4AE /* ApplicationStateMachine.swift */; };
-		D5D3341B2015E30B00ACB4AE /* ActiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E32015E2EF00ACB4AE /* ActiveApplicationState.swift */; };
-		D5D3341C2015E30B00ACB4AE /* StatefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E42015E2EF00ACB4AE /* StatefulViewController.swift */; };
-		D5D3341D2015E30B00ACB4AE /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E52015E2EF00ACB4AE /* ViewControllerState.swift */; };
-		D5D3341E2015E30B00ACB4AE /* AppearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E62015E2EF00ACB4AE /* AppearingViewControllerState.swift */; };
-		D5D3341F2015E30B00ACB4AE /* DisappearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E72015E2EF00ACB4AE /* DisappearedViewControllerState.swift */; };
-		D5D334202015E30B00ACB4AE /* SuspendedApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E82015E2EF00ACB4AE /* SuspendedApplicationState.swift */; };
-		D5D334212015E30B00ACB4AE /* NotRunningApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333E92015E2EF00ACB4AE /* NotRunningApplicationState.swift */; };
-		D5D334222015E30B00ACB4AE /* AppearedViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EA2015E2EF00ACB4AE /* AppearedViewControllerState.swift */; };
-		D5D334232015E30B00ACB4AE /* DisappearingViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EB2015E2EF00ACB4AE /* DisappearingViewControllerState.swift */; };
-		D5D334242015E30B00ACB4AE /* InactiveApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EC2015E2EF00ACB4AE /* InactiveApplicationState.swift */; };
-		D5D334252015E30B00ACB4AE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333ED2015E2EF00ACB4AE /* ApplicationState.swift */; };
-		D5D334262015E30B00ACB4AE /* BackgroundApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333EE2015E2EF00ACB4AE /* BackgroundApplicationState.swift */; };
 		D5D334272015E31500ACB4AE /* StatefulViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F02015E2EF00ACB4AE /* StatefulViewControllerTests.swift */; };
 		D5D334282015E31500ACB4AE /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F12015E2EF00ACB4AE /* StateMachineTests.swift */; };
 		D5D334292015E31500ACB4AE /* ApplicationStateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D333F22015E2EF00ACB4AE /* ApplicationStateMachineTests.swift */; };
@@ -83,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D510F180201CA1D600D5B1A0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D53DFB63201351E000DC7CFE /* StateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53DFB6C201351E000DC7CFE /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D33382201509B100ACB4AE /* StateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +225,7 @@
 				D5D333F52015E2F000ACB4AE /* StateMachine.swift */,
 				D5D333F62015E2F000ACB4AE /* StateMachine.h */,
 				D5D333F72015E2F000ACB4AE /* State.swift */,
+				D510F180201CA1D600D5B1A0 /* Event.swift */,
 				D5D333F82015E2F000ACB4AE /* Info.plist */,
 			);
 			path = Core;
@@ -486,21 +492,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D333FA2015E2F000ACB4AE /* ActiveApplicationState.swift in Sources */,
-				D5D333FB2015E2F000ACB4AE /* StatefulViewController.swift in Sources */,
+				D510F194201CAE7F00D5B1A0 /* BackgroundApplicationState.swift in Sources */,
+				D510F18E201CAE7F00D5B1A0 /* SuspendedApplicationState.swift in Sources */,
+				D510F192201CAE7F00D5B1A0 /* InactiveApplicationState.swift in Sources */,
+				D510F18B201CAE7F00D5B1A0 /* ViewControllerState.swift in Sources */,
+				D510F191201CAE7F00D5B1A0 /* DisappearingViewControllerState.swift in Sources */,
 				D5D3340A2015E2F000ACB4AE /* StateMachine.swift in Sources */,
-				D5D334042015E2F000ACB4AE /* ApplicationState.swift in Sources */,
-				D5D334002015E2F000ACB4AE /* NotRunningApplicationState.swift in Sources */,
-				D5D333FE2015E2F000ACB4AE /* DisappearedViewControllerState.swift in Sources */,
-				D5D333F92015E2F000ACB4AE /* ApplicationStateMachine.swift in Sources */,
-				D5D334032015E2F000ACB4AE /* InactiveApplicationState.swift in Sources */,
+				D510F181201CA1D600D5B1A0 /* Event.swift in Sources */,
+				D510F18A201CAE7F00D5B1A0 /* StatefulViewController.swift in Sources */,
+				D510F18C201CAE7F00D5B1A0 /* AppearingViewControllerState.swift in Sources */,
+				D510F188201CAE7F00D5B1A0 /* ApplicationStateMachine.swift in Sources */,
 				D5D3340C2015E2F000ACB4AE /* State.swift in Sources */,
-				D5D334012015E2F000ACB4AE /* AppearedViewControllerState.swift in Sources */,
-				D5D333FF2015E2F000ACB4AE /* SuspendedApplicationState.swift in Sources */,
-				D5D333FC2015E2F000ACB4AE /* ViewControllerState.swift in Sources */,
-				D5D333FD2015E2F000ACB4AE /* AppearingViewControllerState.swift in Sources */,
-				D5D334052015E2F000ACB4AE /* BackgroundApplicationState.swift in Sources */,
-				D5D334022015E2F000ACB4AE /* DisappearingViewControllerState.swift in Sources */,
+				D510F18D201CAE7F00D5B1A0 /* DisappearedViewControllerState.swift in Sources */,
+				D510F18F201CAE7F00D5B1A0 /* NotRunningApplicationState.swift in Sources */,
+				D510F193201CAE7F00D5B1A0 /* ApplicationState.swift in Sources */,
+				D510F190201CAE7F00D5B1A0 /* AppearedViewControllerState.swift in Sources */,
+				D510F189201CAE7F00D5B1A0 /* ActiveApplicationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D3342A2015E32400ACB4AE /* StateMachine.swift in Sources */,
+				D510F182201CA1D600D5B1A0 /* Event.swift in Sources */,
 				D5D3342B2015E32400ACB4AE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,21 +535,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D334202015E30B00ACB4AE /* SuspendedApplicationState.swift in Sources */,
-				D5D3341D2015E30B00ACB4AE /* ViewControllerState.swift in Sources */,
-				D5D3341F2015E30B00ACB4AE /* DisappearedViewControllerState.swift in Sources */,
-				D5D3341E2015E30B00ACB4AE /* AppearingViewControllerState.swift in Sources */,
-				D5D334242015E30B00ACB4AE /* InactiveApplicationState.swift in Sources */,
+				D510F1A1201CAE8000D5B1A0 /* BackgroundApplicationState.swift in Sources */,
+				D510F19B201CAE8000D5B1A0 /* SuspendedApplicationState.swift in Sources */,
+				D510F19F201CAE8000D5B1A0 /* InactiveApplicationState.swift in Sources */,
+				D510F198201CAE8000D5B1A0 /* ViewControllerState.swift in Sources */,
+				D510F19E201CAE8000D5B1A0 /* DisappearingViewControllerState.swift in Sources */,
 				D5D3342C2015E32500ACB4AE /* StateMachine.swift in Sources */,
-				D5D334212015E30B00ACB4AE /* NotRunningApplicationState.swift in Sources */,
-				D5D334252015E30B00ACB4AE /* ApplicationState.swift in Sources */,
+				D510F183201CA1D600D5B1A0 /* Event.swift in Sources */,
+				D510F197201CAE8000D5B1A0 /* StatefulViewController.swift in Sources */,
+				D510F199201CAE8000D5B1A0 /* AppearingViewControllerState.swift in Sources */,
+				D510F195201CAE8000D5B1A0 /* ApplicationStateMachine.swift in Sources */,
 				D5D3342D2015E32500ACB4AE /* State.swift in Sources */,
-				D5D334262015E30B00ACB4AE /* BackgroundApplicationState.swift in Sources */,
-				D5D3341B2015E30B00ACB4AE /* ActiveApplicationState.swift in Sources */,
-				D5D3341A2015E30B00ACB4AE /* ApplicationStateMachine.swift in Sources */,
-				D5D334222015E30B00ACB4AE /* AppearedViewControllerState.swift in Sources */,
-				D5D3341C2015E30B00ACB4AE /* StatefulViewController.swift in Sources */,
-				D5D334232015E30B00ACB4AE /* DisappearingViewControllerState.swift in Sources */,
+				D510F19A201CAE8000D5B1A0 /* DisappearedViewControllerState.swift in Sources */,
+				D510F19C201CAE8000D5B1A0 /* NotRunningApplicationState.swift in Sources */,
+				D510F1A0201CAE8000D5B1A0 /* ApplicationState.swift in Sources */,
+				D510F19D201CAE8000D5B1A0 /* AppearedViewControllerState.swift in Sources */,
+				D510F196201CAE8000D5B1A0 /* ActiveApplicationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D3342E2015E32600ACB4AE /* StateMachine.swift in Sources */,
+				D510F184201CA1D600D5B1A0 /* Event.swift in Sources */,
 				D5D3342F2015E32600ACB4AE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
